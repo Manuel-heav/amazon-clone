@@ -2,6 +2,7 @@ import React from 'react'
 import { useStateValue } from './StateProvider'
 import './Checkout.css'
 import CheckOutProduct from './CheckOutProduct.js'
+import Subtotal from './Subtotal'
 const CheckOut = () => {
 
     const [{ basket }] = useStateValue();
@@ -30,15 +31,15 @@ const CheckOut = () => {
                     </div>
                 )
             }
+            </div>
             {
                 basket.length > 0 && (
                     <div className="checkout__right">
                             <h1>Subtotal</h1>
-                        {/* <Subtotal /> */}
+                        <Subtotal />
                     </div>
                 )
             }
-            </div>
         </div>
     )
 }
